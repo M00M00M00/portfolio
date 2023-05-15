@@ -16,6 +16,8 @@ const config: GatsbyConfig = {
         icon: 'src/images/favicon.ico',
       },
     },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
   ],
 };
 
