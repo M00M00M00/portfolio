@@ -24,6 +24,8 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/movie`,
       },
     },
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-theme-ui',
   ],
 };
 

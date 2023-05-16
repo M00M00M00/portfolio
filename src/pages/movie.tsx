@@ -1,26 +1,31 @@
 import * as React from 'react';
-import Layout from '../components/layout';
+import LayoutWithoutHeader from '../components/layout-without-header';
 import Seo from '../components/seo';
+import MovieCardLayout from '../components/movie/movie-layout';
 import { graphql } from 'gatsby';
 
 const MoviePage = ({ data }) => {
   return (
-    <Layout pageTitle="Movie Page">
+    <LayoutWithoutHeader pageTitle="Movie">
       <p>Here's my favorite cool movies.</p>
-      <ul>
-        {data.allFile.nodes.map((node) => (
-          <li key={node.name}>{node.name}</li>
-        ))}
-      </ul>
-    </Layout>
+      {data.allMdx.nodes.map((node) => (
+        <MovieCardLayout children={node.frontmatter}></MovieCardLayout>
+      ))}
+    </LayoutWithoutHeader>
   );
 };
 
 export const query = graphql`
   query {
-    allFile {
+    allMdx {
       nodes {
-        name
+        frontmatter {
+          title
+          year
+          comment
+          poster
+        }
+        id
       }
     }
   }

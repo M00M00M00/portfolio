@@ -1,25 +1,32 @@
 .container {
-    margin: auto;
+    margin: 0 auto;
     max-width: 500px;
     font-family: sans-serif;
+    text-align: center;
+    align-items: center;
 }
 .heading {
-    color: rebeccapurple;
+    color: black;
 }
 .nav-links {
     display: flex;
     list-style: none;
-    padding-left: 0;
+    justify-content: center;
+    padding: 0 15px;
 }
 .nav-link-item {
-    padding-right: 2rem;
+    padding: 0 2rem;
 }
 .nav-link-text {
-    color: darkblue;
+    color: black;
+    justify-items: center;
 }
 .site-title{
     font-size: 3rem;
-    color: gray;
+    color: black;
     font-weight: 700;
-    margin: 3rem 0;
+    margin: 2rem 0;
+}
+.main-image{
+    text-align: center;
 }
