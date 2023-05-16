@@ -2,7 +2,7 @@ import * as React from 'react';
 import Layout from '../components/layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import Seo from '../components/seo';
-import { mainImange } from '../components/layout.module.css';
+import { mainImage } from '../components/layout.module.css';
 
 const IndexPage = () => {
   return (
@@ -11,7 +11,7 @@ const IndexPage = () => {
         <StaticImage
           alt="Blond Album Cover"
           src="../images/blond_cover.jpeg"
-          className={mainImange}
+          className={mainImage}
         />
         <div></div>
         <p>I'm making this by following the Gatsby Tutorial.</p>

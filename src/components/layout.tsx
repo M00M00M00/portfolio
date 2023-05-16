@@ -39,6 +39,11 @@ const Layout = ({ pageTitle, children }) => {
               Movie
             </Link>
           </li>
+          <li className={navLinkItem}>
+            <Link to={'/3d'} className={navLinkText}>
+              3D
+            </Link>
+          </li>
         </ul>
       </nav>
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>

@@ -28,6 +28,11 @@ const LayoutWithoutHeader = ({ pageTitle, children }) => {
               Movie
             </Link>
           </li>
+          <li className={navLinkItem}>
+            <Link to={'/3d'} className={navLinkText}>
+              3D
+            </Link>
+          </li>
         </ul>
       </nav>
       <main>
