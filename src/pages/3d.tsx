@@ -1,24 +1,17 @@
 import * as React from 'react';
 import LayoutWithoutHeader from '../components/layout-without-header';
 import { lazy } from 'react';
+import * as THREE from 'three';
 
 const ThreeCanvas = lazy(() => import('../components/three-canvas'));
 
 const ThreePage = () => {
-  const [isMounted, setIsMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   return (
     <>
       <LayoutWithoutHeader pageTitle="3D"></LayoutWithoutHeader>
-      {!isMounted ? null : (
-        <React.Suspense fallback={null}>
-          <ThreeCanvas />
-        </React.Suspense>
-      )}
+      <React.Suspense fallback={null}>
+        <ThreeCanvas />
+      </React.Suspense>
     </>
   );
 };
